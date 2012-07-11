@@ -1,0 +1,35 @@
+This is a starter project using Ruby, Sinatra, Haml, Bootstrap and MongoDB.
+
+It is a bare bones project to start from. Out of the box it contains a small controller
+with methods to register a user and view the users profile and dashboard. 
+
+It also has simple login & logout functionality.
+
+This has been built by spf13 http://spf13.com
+
+It is based on worked done by ghostandthemachine.
+https://github.com/ghostandthemachine/sinatra-haml-bootstrap-fluid
+
+
+Setup:
+   It is based on the following Gems
+    - Bundler
+    - Shotgun
+    - Rack
+    - Haml
+    - Mongo
+    - Vlad the Deployer
+
+  To get up and running all that should be needed is to install the Ruby gem
+Bundler if up don't already have it installed then run:
+    - $ bundle install
+
+  That should install everything that is need for the app to run. To start it
+run:
+    - $ shotgun
+
+  As is the case with any Shotgun app you can update the config.ru file to
+change Shotgun settings. Like wise /config/deploy.rb for the Vlad settings and
+Gemfile for your bundler install settings
+
+enjoy!

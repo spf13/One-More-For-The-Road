@@ -19,8 +19,8 @@ footer {
     margin-top: -40px; /* negative value of footer height */
     height: 40px;
     clear:both;
-    border: none;
-    padding: 0px;
+    border: solid 1px #EEE;
+    padding: 6px 0 0;
 }
 
 /*Opera Fix*/

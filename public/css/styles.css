@@ -10,17 +10,16 @@ html, body {height: 100%;}
 
 #main {
     overflow: visible;
-    padding-bottom: 40px;
+    padding-bottom: 45px;
     padding-top: 60px;
 }  /* must be same height as the footer */
 
 footer {
     position: relative;
-    margin-top: -35px; /* negative value of footer height */
+    margin-top: -41px; /* negative value of footer height */
     height: 40px;
     clear:both;
-    border: solid 1px #EEE;
-    padding: 6px 0 0;
+    border-top: solid 1px #EEE;
 }
 
 /*Opera Fix*/

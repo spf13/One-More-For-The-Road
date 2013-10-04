@@ -27,7 +27,7 @@ helpers do
     if session[:flash]
       tmp = session[:flash]
       session[:flash] = false
-      "<fieldset><legend>Notice</legend><p>#{tmp}</p></fieldset>"
+      "<div class=\"container\"><div class=\"row\"><div class='col-md-3'>&nbsp;</div><div class=\"alert alert-info col-md-6\" align='center'>#{tmp}</div><div class='col-md-3'>&nbsp;</div></div></div>"
     end
   end
 end

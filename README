@@ -10,8 +10,6 @@ This has been built by spf13 http://spf13.com
 It is based on worked done by ghostandthemachine.
 https://github.com/ghostandthemachine/sinatra-haml-bootstrap-fluid
 
-
-Setup:
    It is based on the following Gems
     - Bundler
     - Shotgun

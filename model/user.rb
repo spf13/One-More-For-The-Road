@@ -1,30 +1,43 @@
 class User
   include MongoModule
 
-  attr_accessor :_id, :name, :email, :email_hash, :salt, :hashed_password
+  attr_accessor :_id, :name, :email, :email_hash, :salt, :admin, :hashed_password
 
   def init_collection
-    self.collection = 'users'
+    @collection = 'users'
+  end
+
+  def admin?
+      @admin
+  end
+
+  def email=(an_email = nil)
+      if an_email == nil
+          @email.downcase
+      else
+          @email = an_email.downcase
+          @email_hash = Digest::MD5.hexdigest(@email)
+      end
   end
 
   def password=(pass)
-    self.salt = random_string(10) unless self.salt
-    self.hashed_password = User.encrypt(pass, self.salt)
+    @salt = random_string(10) unless @salt
+    @hashed_password = User.encrypt(pass, @salt)
   end
 
   def self.encrypt(pass, salt)
     Digest::SHA1.hexdigest(pass + salt)
   end
 
-  def self.auth(login, pass)
-    u = Users.find_one("email" => login)
+  def self.auth(email, pass)
+    u = USERS.find_one("email" => email.downcase)
     return nil if u.nil?
     return User.new(u) if User.encrypt(pass, u['salt']) == u['hashed_password']
     nil
   end
 
   def self.new_from_email(email)
-    u = Users.find_one("email" => email)
+    u = USERS.find_one("email" => email.downcase)
     return nil if u.nil?
     return User.new(u)
     nil

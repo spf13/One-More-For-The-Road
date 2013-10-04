@@ -82,6 +82,6 @@ get '/user/:email/profile' do
 end
 
 get '/list' do
-  @users = Users.find
-  haml :list
+    @users = USERS.find
+    haml :list
 end

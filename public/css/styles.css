@@ -16,7 +16,7 @@ html, body {height: 100%;}
 
 footer {
     position: relative;
-    margin-top: -41px; /* negative value of footer height */
+    margin-top: -41; /* negative value of footer height */
     height: 40px;
     clear:both;
     border-top: solid 1px #EEE;
@@ -39,12 +39,12 @@ body:before {/* thanks to Maleika (Kohoutec)*/
     height: 28px;
 }
 
-a.brand {
+a.navbar-brand {
     background-image: url('/images/milieu_sm.png');
     background-repeat: no-repeat;
 }
 
-.navbar .brand {
+.navbar .navbar-brand {
     padding-left: 45px;
 }
 
